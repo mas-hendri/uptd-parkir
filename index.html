@@ -75,8 +75,24 @@
 				document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
 			</script>
 			<!-- tanggal -->
+		
+		  <!-- jam -->
+			<script>
+			window.setTimeout("waktu()", 1000);
+	 
+			function waktu() {
+			var waktu = new Date();
+			setTimeout("waktu()", 1000);
+			document.getElementById("jam").innerHTML = waktu.getHours();
+			document.getElementById("menit").innerHTML = waktu.getMinutes();
+			document.getElementById("detik").innerHTML = waktu.getSeconds();
+			}
+			</script>
+		  <!-- jam -->
 
             <div class="media">
+                    <P id="jam"></P>
+                    <P id="menit"></P>
               <div class="d-flex">
                 <img src="img/me/bg.png" alt="Foto" >
 				<img src="img/me/stamp_foto.png" alt="" style="position: absolute; width: 80px; height: 80px;"/>
