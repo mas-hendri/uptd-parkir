@@ -8,7 +8,7 @@
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="icon" href="img/favicon.png" type="image/png" />
-    <title>Staff - Putra Jaya</title>
+    <title>Putra Jaya - Dishub Tulang Bawang Barat</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="vendors/linericon/style.css" />
@@ -60,33 +60,35 @@
         <div class="banner_inner d-flex align-items-center">
           <div class="banner_content">
 
-			<!-- Menampilkan Hari, Bulan dan Tahun -->
-			<script type='text/javascript'>
-				var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
-				var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
-				var date = new Date();
-				var day = date.getDate();
-				var month = date.getMonth();
-				var thisDay = date.getDay(),
-					thisDay = myDays[thisDay];
-				var yy = date.getYear();
-				var year = (yy < 1000) ? yy + 1900 : yy;
-				document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
-			</script>
-			<!-- tanggal -->
+            <!-- jam dan tanggal -->
+            <p><b style="color:grey"><span id="tanggalwaktu"></span></b></p>
+            <script>
+              var tw = new Date();
+              if (tw.getTimezoneOffset() == 0) (a=tw.getTime() + ( 7 *60*60*1000))
+              else (a=tw.getTime());
+              tw.setTime(a);
+              var tahun= tw.getFullYear ();
+              var hari= tw.getDay ();
+              var bulan= tw.getMonth ();
+              var tanggal= tw.getDate ();
+              var hariarray=new Array("Minggu,","Senin,","Selasa,","Rabu,","Kamis,","Jum&#39;at,","Sabtu,");
+              var bulanarray=new Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","Nopember","Desember");
+              document.getElementById("tanggalwaktu").innerHTML = ((tw.getHours() < 10) ? "0" : "") + tw.getHours() + ":" + ((tw.getMinutes() < 10)? "0" : "") + tw.getMinutes() + (" &nbsp; - &nbsp; ") + hariarray[hari]+" "+tanggal+" "+bulanarray[bulan]+" "+tahun+" ";
+            </script>
+            <!-- jam dan tanggal -->
 
             <div class="media">
               <div class="d-flex">
-                <img src="img/me/putrajaya.png" alt="Foto Putra Jaya" >
-				<img src="img/me/stamp_foto.png" alt="" style="position: absolute; width: 90px; height: 90px;"/>
+		            <img src="img/me/stamp_foto2.png" alt="" style="position: absolute; opacity: 0.7; width: 110px; height: 110px; z-index: 1;"/>
+                <img src="img/me/putrajaya.png" alt="Foto" style="z-index: 2;">
               </div>
               <div class="media-body">
                 <div class="personal_text">
 
 				  <HR style="margin: 1;">
-                  <h4 style="font-size:xx-large; margin-bottom: -3px;"><b>PUTRA JAYA</b></h4>
+                  <h4 style="font-size:xx-large; margin-bottom: -2px;"><b>PUTRA JAYA</b></h4>
                   <p>
-                    Staff Dinas Perhubungan
+                    Staf Dinas Perhubungan
                   </p>
 				  <HR style="margin-top: -30px;">
                   <ul class="list basic_info">
@@ -102,12 +104,12 @@
 						>
 					  </li>
                     <li>
-                      <a href="#"
+                      <a href="https://www.google.com/maps/place/DINAS+PERHUBUNGAN+KABUPATEN+TULANG+BAWANG+BARAT/@-4.5154027,105.0877553,17z/data=!3m1!4b1!4m6!3m5!1s0x2e3f35006d0774fd:0xd82597dc79510d7b!8m2!3d-4.5154081!4d105.0903302!16s%2Fg%2F11x2x2wxy6?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D"
                         ><i class="lnr lnr-apartment"></i> Dinas Perhubungan</a
                       >
                     </li>
                     <li>
-                      <a href="#"
+                      <a href="https://id.wikipedia.org/wiki/Kabupaten_Tulang_Bawang_Barat"
                         ><i class="lnr lnr-bookmark"></i> Kabupaten Tulang Bawang Barat</a
                       >
                     </li>
@@ -120,13 +122,17 @@
                       <a href="https://wa.me/6282217544434"><i class="fa fa-whatsapp"></i></a>
                     </li>
                     <li>
-                      <a href="mailto:email@gmail.com?subject=kontak%20baru&body=Izin%20mas%21"><i class="fa fa-envelope"></i></a>
+                      <a href="mailto:@gmail.com?subject=kontak%20baru&body="><i class="fa fa-envelope"></i></a>
+                    </li>
+                    <li>
+                      <a href="https://www.google.com/maps/place/DINAS+PERHUBUNGAN+KABUPATEN+TULANG+BAWANG+BARAT/@-4.5154027,105.0877553,17z/data=!3m1!4b1!4m6!3m5!1s0x2e3f35006d0774fd:0xd82597dc79510d7b!8m2!3d-4.5154081!4d105.0903302!16s%2Fg%2F11x2x2wxy6?entry=ttu&g_ep=EgoyMDI1MDMwMy4wIKXMDSoASAFQAw%3D%3D"><i class="fa fa-map-marker"></i></a>
                     </li>
                   </ul>
 				  <HR style="">
 					<br>
 				  <P style="margin-bottom: -8px;">
-					<img src="img/me/stample.png" alt="" style="position: absolute; width: 200px; height: 200px; margin-top: -30px; margin-left: -30px; z-index: 1;"/>
+           				  <!-- <img src="img/me/ttd.png" alt="dto" style="position: absolute; width: 200px; height: 130px; margin-left: -30px; z-index: 2;"/> -->
+					  <img src="img/me/stample.png" alt="stamp" style="position: absolute; transform: rotate(-15deg); width: 200px; height: 200px; margin-top: -30px; margin-left: -50px; z-index: 3;"/>
 					Mengetahui,</P>
 					<p>
 					Kepala Dinas</p>
